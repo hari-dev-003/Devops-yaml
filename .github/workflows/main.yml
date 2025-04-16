@@ -34,3 +34,15 @@ jobs:
                 echo "Running the test..."
                 # Add your test commands here
                 echo "Test completed."
+    
+    deploy:
+        name: Run deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Run the deploy
+              run: |
+                echo "Running the deploy"
+                mkdir deploy || cd deploy || touch file.txt 
+                echo "Deployed successfully"
