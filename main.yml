@@ -1,0 +1,84 @@
+# Scalars (strings, numbers, booleans, null)
+name: John Doe
+age: 30
+is_active: true
+nickname: ~  # Null value
+
+# Sequences (lists)
+hobbies:
+  - Reading
+  - Hiking
+  - Coding
+
+# Mappings (key-value pairs)
+address:
+  street: 123 Main St
+  city: Metropolis
+  zip: 54321
+
+# Nested structures
+projects:
+  - name: Project Alpha
+    status: completed
+    team:
+      - Alice
+      - Bob
+  - name: Project Beta
+    status: in-progress
+    team:
+      - Charlie
+      - Dana
+
+# Anchors and Aliases
+default_settings: &defaults
+  theme: dark
+  notifications: true
+
+user_settings:
+  <<: *defaults  # Merge anchor
+  notifications: false  # Override specific value
+
+# Multiline strings
+description: |
+  This is a YAML example file.
+  It demonstrates various YAML concepts.
+  You can use it as a reference.
+
+# Inline comments
+version: 1.0
+
+---
+
+name: Devops 
+age: 25
+logs: 
+  - date: 2023-10-01
+    message: "Started working on the project"
+  - date: 2023-10-02
+    message: "Completed the initial setup"
+  - date: 2023-10-03
+    message: "Deployed the application to production"
+
+# Array of objects
+roles: [ name: "DevOps Engineer", level: "Senior" ]
+
+#command execution
+commands:
+  - name: "Install dependencies"
+    command: "npm install"
+    description: "Installs all required dependencies for the project."
+  - name: "Run tests"
+    command: "npm test"
+    description: "Runs the test suite to ensure code quality."
+  - name: "Build project"
+    command: "npm run build"
+    description: "Builds the project for production deployment."
+
+
+# Environment variables
+env:
+  NODE_ENV: production
+  DB_HOST: localhost
+  DB_USER: root
+  DB_PASS: password
+  DB_NAME: mydb
