@@ -1,0 +1,21 @@
+name: Sample Workflow
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+jobs:       
+    run:
+        name: Run Sample Script
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Run the script
+              run: |
+                echo "Running the script..."
+                # Add your script commands here
+                echo "Script completed."
