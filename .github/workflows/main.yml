@@ -1,5 +1,6 @@
 name: Sample Workflow
 
+#This is the logic to trigger the workflow
 on:
     push:
         branches:
@@ -7,6 +8,8 @@ on:
     pull_request:
         branches:
             - main
+
+# This is section where the steps GitHub Actions workflow file.
 jobs:       
     run:
         name: Run Sample Script
