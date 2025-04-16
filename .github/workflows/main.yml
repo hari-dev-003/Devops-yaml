@@ -19,3 +19,15 @@ jobs:
                 echo "Running the script..."
                 # Add your script commands here
                 echo "Script completed."
+    
+    test:
+        name: Run test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Run the test
+              run: |
+                echo "Running the test..."
+                # Add your test commands here
+                echo "Test completed."
